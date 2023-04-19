@@ -1,0 +1,63 @@
+:root{
+    --pink:#FF7D99;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    border: 2px solid black;
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    margin-block:20px;
+}
+/* screen section starts */
+.screen{
+    text-align: center;
+    border:2px solid red;
+    width: 95%;
+    height: 140px;
+    display:block;
+    margin: auto;
+    margin-block: 15px;
+}
+/* screen section ends */
+
+/* function section */
+.function{
+    border:2px solid orange;
+    width: 95%;
+    height:310px;
+    margin: auto;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+/* keypad section  */
+.keypad{
+    border: 2px solid pink;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top:10px;
+    height: 290px;
+    width:555px;
+}
+/* keypad section ends */
+
+/* operation section */
+.operation{
+    border: 2px solid green;
+    display: inline-block;
+    height: 290px;    
+    width: 190px;
+    margin-left: 10px;
+    margin-right:5px;
+    margin-top:10px;
+    box-sizing: border-box;
+}
+/* operation section ends*/
+/* function section ends */
