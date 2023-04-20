@@ -23,7 +23,7 @@
     <div class="container">
         <!-- screen section -->
         <div class="screen">
-            <p>Screen</p>
+            <p id="output">.......</p>
         </div>
         <!-- screen section ends -->
 
@@ -32,13 +32,46 @@
 
             <!-- keypad section -->
             <div class="keypad">
-                <p>Keypad</p>
+                <table class="keys">
+                    <tr>
+                        <td><input class="btn" id="num-1" type="button" value="1"></td>
+                        <td><input class="btn" id="num-2" type="button" value="2"></td>
+                        <td><input class="btn" id="num-3" type="button" value="3"></td>
+                        <td><input class="btn" id="num-4" type="button" value="4"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" id="num-5" type="button" value="5"></td>
+                        <td><input class="btn" id="num-6" type="button" value="6"></td>
+                        <td><input class="btn" id="num-7" type="button" value="7"></td>
+                        <td><input class="btn" id="num-8" type="button" value="8"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn"  type="button" value="_"></td>
+                        <td><input class="btn" id="num-9" type="button" value="9"></td>
+                        <td><input class="btn" id="num-0" type="button" value="0"></td>
+                        <td><input class="btn" type="button" value="_"></td>
+                    </tr>
+                </table>
             </div>
             <!-- keypad section ends -->
 
             <!-- operation section -->
             <div class="operation">
-                <p>operation</p>
+                <table class="keys">
+                    <tr>
+                        <td><input class="btn" type="button" value="+"></td>
+                        <td><input class="btn" type="button" value="-"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" type="button" value="*"></td>
+                        <td><input class="btn" type="button" value="/"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" type="button" value="!"></td>
+                        <td><input class="btn" type="button" value="^"></td>
+                    </tr>
+                </table>
+                <input class="btn" type="button" value="Enter">
             </div>
             <!-- operation section ends -->
         </div>
