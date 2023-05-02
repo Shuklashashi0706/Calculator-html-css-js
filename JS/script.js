@@ -1,27 +1,38 @@
-let doc=document.body.firstElementChild.firstElementChild.firstElementChild;
-let doc1=document.getElementById('num-1');
-console.log(doc1);
-let doc2=document.getElementById('num-2');
-console.log(doc2);
-f1=()=>{
-    doc.value=2;
-}
-f=()=>{
-    doc.value=1;
-}
-let btn = document.getElementsByClassName('btn');
-console.log(btn[0].id);
-for(let k=0;k<btn.length;k++){
-    let t=btn[k];
-    console.log(btn[k]);
-    console.log(t.id);
-}
-onclick=()=>{
-    if(doc.id=='num-1'){
-        f();
+// get the result input element
+const result = document.getElementById('result');
+
+// get all number button elements
+const numButtons = document.querySelectorAll('.keypad .btn:not(.operation .btn)');//here,it selects all the buttons from keypad and :not is used to exclude operation btn
+
+// get all operation button elements
+const operationButtons = document.querySelectorAll('.operation .btn:not(#equals)');
+
+// add click event listeners to number buttons
+numButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.id === 'clear') {
+      // Clear the screen
+      result.value = '';
     }
-}
-let f=()=>{
-    document.body.style.color='red';
-}
-setTimeout(f,2000);
+    else {
+      result.value += button.value;
+    }
+  });
+});
+
+// add click event listeners to operation buttons
+operationButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    result.value += ' ' + button.value + ' ';
+  });
+});
+
+// add click event listener to equals button
+document.getElementById('equals').addEventListener('click', () => {
+  // evaluate the expression in the result input
+  try {
+    result.value = eval(result.value);
+  } catch (error) {
+    result.value = 'Error';
+  }
+});
